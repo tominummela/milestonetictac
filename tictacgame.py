@@ -1,41 +1,23 @@
-board = ["___|___|___","___|___|___","   |   |   "]
+#The gameboard
 
-boarddict = {"pos1":"board[2][23]","pos2":"board[2][27]","pos3":"board[2][31]",
-             "pos4":"board[1][12]","pos5":"board[1][16]","pos6":"board[1][20]",
-             "pos7":"board[0][1]","Pos8":"board[0][5]","pos9":"board[0][9]"}
+def display_board(board):
+    print(board[7]+"|"+board[8]+"|"+board[9])
+    print(board[4]+"|"+board[5]+"|"+board[6])
+    print(board[1]+"|"+board[2]+"|"+board[3])
 
-def playboard():
-    #This prints the empty board
-    print(board[0])
-    print(board[1])
-    print(board[2])
+test_board = ["#","X","O","X","O","X","O","X","O","X"]
+display_board(test_board)
 
-print(playboard())
-
-def players():
-    playerlist[playerx, playero]
-    player = input("Type Y if you want to play as x and go first, type N if you want to play as o, go second and lose")
-    if player input == str("Y"):
-        player = playerx
-    elif player input == str("N"):
-        player = playero
+def player_input():
+    marker = ""
+    while marker != "X" or marker != "O":
+        marker = input("Please select your marker. X or O, and press ENTER").upper()
+    if marker == "X":
+        return (X,O)
     else:
-        print("You need to learn to either read or type, try again.")
+        return (O,X)
 
-def playerinputs():
-    #fill the board as game progresses
-    # check for 3 in a row
-    #check for full board
-    #check for replay willingness
+player_input()
 
-
-
-
-
-
-
-
-
-#_7_|_8_|_9_
-#_4_|_5_|_6_
-# 1 | 2 | 3
+def board_marker():
+    
