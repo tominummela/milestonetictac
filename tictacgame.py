@@ -35,3 +35,35 @@ def win_check(board, mark):
         board[1] == mark and board[5] == mark and board[9] or
         board[3] == mark and board[5] == mark and board[7] or
 
+
+def choose_first():
+    if random.randint(0,1) == 0:
+        return "Player 2"
+    else:
+        return "Player 1"
+
+
+def space_check(board, position):
+    return board[position] == " "
+
+def board_full_check(board):
+    for i in range(1,10)
+        if space_check(board, i):
+        return False
+    return True
+
+
+def player_choice(board):
+    position = 0
+    while position not in [1,2,3,4,5,6,7,8,9] or not space_check(board,position):
+        position = int(input("Choose your next move: 1-9") "))
+    return position
+
+def replay():
+        return input("Do you want to play again? YES or NO").lower().startswith("y")
+
+
+#-----------------------------------------------------------------------------
+#---------------------------------THE GAME------------------------------------
+#-----------------------------------------------------------------------------
+
