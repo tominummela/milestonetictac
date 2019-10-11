@@ -6,7 +6,7 @@ def display_board(board):
     print(board[1]+"|"+board[2]+"|"+board[3])
 
 test_board = ["#","X","O","X","O","X","O","X","O","X"]
-display_board(test_board)
+
 
 def player_input():
     marker = ""
@@ -17,7 +17,21 @@ def player_input():
     else:
         return (O,X)
 
-player_input()
 
-def board_marker():
-    
+def place_marker(board,marker,position):
+    board[position] = marker
+
+
+def win_check(board, mark):
+    #Horizontal winchecks
+    return ((board[7] == mark and board[8] == mark and board[9] or
+        board[4] == mark and board[5] == mark and board[6] or
+        board[1] == mark and board[2] == mark and board[3] or
+    #Vertical winchecks
+        board[1] == mark and board[4] == mark and board[7] or
+        board[2] == mark and board[5] == mark and board[8] or
+        board[3] == mark and board[6] == mark and board[9] or
+    #Diagonal winchecks
+        board[1] == mark and board[5] == mark and board[9] or
+        board[3] == mark and board[5] == mark and board[7] or
+
